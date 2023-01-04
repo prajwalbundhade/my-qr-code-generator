@@ -42,7 +42,7 @@ color: rgb(255, 255, 255);
    
 }
 
-.form-container form{
+.form-container  form{
    border-radius: 20px;
    width: 450px;
    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
