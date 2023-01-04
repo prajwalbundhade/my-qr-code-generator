@@ -20,7 +20,9 @@
 
       <input type="text" id="input" name="input" placeholder="enter here..." class="box" required><br>
       <center><button type="button" class="form-btn" onclick="generateQRCode()">Generate QR Code</button><br>
-        <div id="qrCode"></div><br>
+        <div id="qrCode" ></div><br>
+        <button id="download-button" target="_blank">Download QR Code</button>
+
       </center>
 
 
@@ -98,6 +100,21 @@
       });
     }
   </script>
+  <script>
+    document.getElementById("download-button").addEventListener("click", function() {
+      // Get the QR code image
+      var img = document.getElementById("qrCode").querySelector("img");
+      // Create a link element
+      var link = document.createElement("a");
+      // Set the link's href to the QR code image's src
+      link.href = img.src;
+      // Set the link's download attribute to the desired file name
+      link.download = "qr-code.png";
+      // Click the link to trigger the download
+      link.click();
+    });
+  </script>
+  
 </body>
 
 </html>
