@@ -21,7 +21,7 @@
    width: 700px;
 }
 
-.container .content h3{
+.container .content h1{
 color: rgb(255, 255, 255);
    text-transform: uppercase;
    font-size: 22px;
@@ -95,4 +95,10 @@ color: rgb(255, 255, 255);
 
 .form-container form .form-btn:hover{
    background-color: #18ec82;
+}
+
+.footer a{
+   text-decoration: none;
+   color: aliceblue;
+   background: #28282a;
 }
