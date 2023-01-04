@@ -1,29 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My QR Code Generator</title>
-    <link rel="stylesheet" href="style1.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My QR Code Generator - Generate QR Codes Online</title>
+  <meta name="description"
+    content="Use our QR code generator to easily create QR codes for text, URLs, and other data. Try it now for free and start generating QR codes in seconds.">
+  <link rel="stylesheet" href="style1.css">
 </head>
+
 <body>
-    <div class="form-container">
+  <div class="form-container">
 
-        <form action="" method="post">
-            <h3 class="title">My QR Code Generator</h3>
-            <h4 class="my-title">Enter text or URL:</h4>
-          
-            <input type="text" id="input" name="input" placeholder="enter here..." class="box" required><br>
-            <center><button type="button" class="form-btn" onclick="generateQRCode()">Generate QR Code</button><br>
-                <div  id="qrCode"></div></center>
-           
-            
-        </form>
+    <form action="" method="post">
+      <h1 class="title">My QR Code Generator</h1>
+      <h2 class="my-title">Enter text or URL:</h2>
+
+      <input type="text" id="input" name="input" placeholder="enter here..." class="box" required><br>
+      <center><button type="button" class="form-btn" onclick="generateQRCode()">Generate QR Code</button><br>
+        <div id="qrCode"></div><br>
+      </center>
+
+
+    </form>
+
+  </div>
+  <div class="footer">
+    <footer>
+      <p>Copyright 2022 My QR Code Generator</p>
+      <nav>
+        <ul>
+          <li><a href="https://prajwalbundhade.github.io/my-qr-code-generator/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
     
-    </div>
+    <style>
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+    }
+    
+    footer p {
+      margin: 0;
+      font-size: 0.8em;
+      text-align: center;
+    }
+    
+    footer nav {
+      display: flex;
+      justify-content: center;
+    }
+    
+    footer nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    
+    footer nav ul li {
+      margin: 0 0.5em;
+    }
+    
+    footer nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+    
+    footer nav ul li a:hover {
+      text-decoration: underline;
+    }
+    </style>
+    
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
   <script>
     function generateQRCode() {
       // Get the input text
@@ -34,11 +92,12 @@
         text: input,
         width: 180,
         height: 180,
-        colorDark : "#000000",
-        colorLight : "#ffffff",
-        correctLevel : QRCode.CorrectLevel.H
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
       });
     }
   </script>
 </body>
+
 </html>
