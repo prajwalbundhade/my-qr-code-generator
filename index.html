@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My QR Code Generator</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="form-container">
+
+        <form action="" method="post">
+            <h3 class="title">My QR Code Generator</h3>
+            <h4 class="my-title">Enter text or URL:</h4>
+          
+            <input type="text" id="input" name="input" placeholder="enter here..." class="box" required><br>
+            <center><button type="button" class="form-btn" onclick="generateQRCode()">Generate QR Code</button><br>
+                <div  id="qrCode"></div></center>
+           
+            
+        </form>
+    
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script>
+    function generateQRCode() {
+      // Get the input text
+      var input = document.getElementById("input").value;
+
+      // Create a new QR code object
+      var qr = new QRCode("qrCode", {
+        text: input,
+        width: 180,
+        height: 180,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+      });
+    }
+  </script>
+</body>
+</html>
